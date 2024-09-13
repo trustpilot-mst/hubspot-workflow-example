@@ -1,0 +1,24 @@
+// {
+//   "compilerOptions": {
+//     "module": "commonjs",
+//     "esModuleInterop": true,
+//     "target": "es2022",
+//     "strict": true,
+//     "noImplicitAny": true,
+//     "noUnusedLocals": true,
+//     "noUnusedParameters": false,
+//     "noImplicitReturns": true,
+//     "noFallthroughCasesInSwitch": true,
+//     "moduleResolution": "node",
+//     "sourceMap": true,
+//     "rootDir": "src",
+//     "outDir": "dist",
+//     "baseUrl": ".",
+//     "paths": {
+//       "*": ["node_modules/*", "src/types/*"]
+//     },
+//     "skipLibCheck": true // Necessary to avoid installing @types/express for authorization middleware
+//   },
+//   "include": ["src/**/*.ts", "src/index.js"],
+//   "exclude": ["node_modules", "dist"]
+// }
