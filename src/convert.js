@@ -11,7 +11,7 @@ fs.readFile('src/index.js', 'utf8', (err, data) => {
     // Convert the file content to a JSON string
     const jsonString = JSON.stringify(data);
     const objToSave = {
-      actionUrl: "https://webhook.site/e9bcc0f8-6d0c-4c4d-81c1-ca20316d355c",
+      actionUrl: "https://teal-upward-crane.ngrok-free.app/polling",
       published: true,
       inputFields: [
         {
@@ -27,10 +27,10 @@ fs.readFile('src/index.js', 'utf8', (err, data) => {
       objectTypes: ["CONTACT", "DEAL"],
       labels: {
         en: {
-          actionName: "Hello there",
-          actionCardContent: "BING BONG",
+          actionName: "Test.v1",
+          actionCardContent: "ActionCard",
           inputFieldLabels: {
-            widgetName: "Widget Name"
+            widgetName: "Widget Namee"
           }
         }
       },
