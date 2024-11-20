@@ -1,19 +1,13 @@
-const axios = require("axios")
+exports.main = function(event, callback) { 
+  return callback(transformRequest(event)); 
+}
 
-exports.main = async (event, context) => {
-
-  try {
-    const { data } = await axios.post("https://teal-upward-crane.ngrok-free.app/workflows", {...event})
-    console.log(data)
-  } catch(e){
-    console.log(e)
-  }
-
-  // callback function to return data to the next step in the worfklow
-  callback({
-    "data": {
-      "myObjectId": event["object"]["objectId"],
-      "myField": event["inputFields"]["widgetName"]
-    }
-  })
+function transformRequest(event) { 
+  return { 
+    webhookUrl: event.webhookUrl, 
+    body: JSON.stringify(event.object), 
+    contentType: 'application/x-www-form-urlencoded', 
+    accept: 'application/json', 
+    httpMethod: 'POST' 
+  }; 
 }

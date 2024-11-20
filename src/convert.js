@@ -11,7 +11,7 @@ fs.readFile('src/index.js', 'utf8', (err, data) => {
     // Convert the file content to a JSON string
     const jsonString = JSON.stringify(data);
     const objToSave = {
-      actionUrl: "https://teal-upward-crane.ngrok-free.app/polling",
+      actionUrl: "https://teal-upward-crane.ngrok-free.app/workflows",
       published: true,
       inputFields: [
         {
@@ -24,13 +24,12 @@ fs.readFile('src/index.js', 'utf8', (err, data) => {
           "isRequired": true
         }
       ],
-      objectTypes: ["CONTACT", "DEAL"],
       labels: {
         en: {
-          actionName: "Test.v1",
-          actionCardContent: "ActionCard",
+          actionName: "Workflow Test 2.13 /workflows",
+          actionCardContent: "Hello there my friend",
           inputFieldLabels: {
-            widgetName: "Widget Namee"
+            "widgetName": "Widget Name"
           }
         }
       },
