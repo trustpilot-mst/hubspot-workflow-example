@@ -26,7 +26,7 @@ fs.readFile('src/index.js', 'utf8', (err, data) => {
       ],
       labels: {
         en: {
-          actionName: "Workflow Test 2.15 /workflows",
+          actionName: "Workflow Test 2.17 /workflows",
           actionCardContent: "Hello there my friend",
           inputFieldLabels: {
             "widgetName": "Widget Name"
