@@ -8,7 +8,7 @@ fs.readFile('src/index.js', 'utf8', (err, data) => {
   }
 
   try {
-    // Convert the file content to a JSON string
+    // Build custom action object for stringifying
     const objToSave = {
       actionUrl: "https://teal-upward-crane.ngrok-free.app/workflows", // where the action will be sent
       published: true, // whether the action can be used in a workflow
