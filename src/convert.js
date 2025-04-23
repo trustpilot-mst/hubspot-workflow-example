@@ -9,31 +9,30 @@ fs.readFile('src/index.js', 'utf8', (err, data) => {
 
   try {
     // Convert the file content to a JSON string
-    const jsonString = JSON.stringify(data);
     const objToSave = {
-      actionUrl: "https://teal-upward-crane.ngrok-free.app/workflows",
-      published: true,
-      inputFields: [
+      actionUrl: "https://teal-upward-crane.ngrok-free.app/workflows", // where the action will be sent
+      published: true, // whether the action can be used in a workflow
+      inputFields: [ // Not needed in POC, docs: https://developers.hubspot.com/docs/guides/api/automation/custom-workflow-actions#input-fields
         {
-          "typeDefinition": {
-            "name": "widgetName",
-            "type": "string",
-            "fieldType": "text"
+          "typeDefinition": { 
+            "name": "widgetName", 
+            "type": "string", 
+            "fieldType": "text" 
           },
-          "supportedValueTypes": ["STATIC_VALUE"],
+          "supportedValueTypes": ["STATIC_VALUE"],  
           "isRequired": true
         }
       ],
       labels: {
         en: {
-          actionName: "Workflow Test 2.17 /workflows",
-          actionCardContent: "Hello there my friend",
-          inputFieldLabels: {
+          actionName: "Workflow Test 2.17 /workflows", // action name
+          actionCardContent: "Hello there my friend", // action description
+          inputFieldLabels: { // input field labels for customers, not needed in PoC
             "widgetName": "Widget Name"
           }
         }
       },
-      functions: [
+      functions: [ // the function that will be executed when the action is triggered
         {
           functionType: "PRE_ACTION_EXECUTION",
           functionSource: data,
